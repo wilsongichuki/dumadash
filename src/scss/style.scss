@@ -1,6 +1,10 @@
 @import 'settings';
 @import 'global';
 
-body{
+.main{
     background-color: #ccc;
+
+    &-header{
+
+    }
 }

@@ -51,7 +51,9 @@ gulp.task('default', ['serve']);
 // BUILDING FILES
 // Delete when copying files
 gulp.task('clean:dist', function(){
-    return del(['C:/Users/wilso_000/Desktop/dumadash-gh-pages/*.html', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/css', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/js', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/fonts', '!C:/Users/wilso_000/Desktop/dumadash-gh-pages/wireframes/**/*'], {force: true});
+    return del(
+        ['C:/Users/wilso_000/Desktop/dumadash-gh-pages/*.html', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/css', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/js', 'C:/Users/wilso_000/Desktop/dumadash-gh-pages/fonts', '!C:/Users/wilso_000/Desktop/dumadash-gh-pages/wireframes/**/*'],
+        {force: true});
 });
 
 // Copy final files to dist folder

@@ -665,6 +665,6 @@ tr.bg-none {
   border-width: 5px;
 }
 
-body {
+.main {
   background-color: #ccc;
 }
