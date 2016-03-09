@@ -1,0 +1,27 @@
+{
+  "name": "dumadash",
+  "version": "0.0.1",
+  "description": "This is the base start of the project. It is the bare minimum of folders and styles you should have for any project start.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@wilsongichuki",
+  "license": "WTFPL",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "jasmine": "^2.3.2",
+    "node-sass": "^3.4.2",
+    "gulp-jasmine": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsongichuki/dumadash.git"
+  },
+  "homepage": "https://wilsongichuki.github.io/dumadash/"
+}
