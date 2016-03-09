@@ -1,0 +1,365 @@
+// Settings:
+$md: 15px; // for margin and padding
+$border-radius: 4px;
+$body-bg: darken(white, 5%);
+$app-bg: darken(white, 2%);
+$btn-bottom-width: 3px;
+
+// Mixins
+@mixin border-radius {
+    border-radius: $border-radius;
+}
+
+
+@mixin padding($p, $s) {
+    @if $s == xl {
+        padding#{-$p}: $md*4;
+    }
+    @if $s == lg {
+        padding#{-$p}: $md*2;
+    }
+    @if $s == md {
+        padding#{-$p}: $md;
+    }
+    @if $s == sm {
+        padding#{-$p}: $md/2;
+    }
+    @if $s == xs {
+        padding#{-$p}: $md/4;
+    }
+} // padding
+@mixin margin($p, $s) {
+    @if $s == xl {
+        margin#{-$p}: $md*4;
+    }
+    @if $s == lg {
+        margin#{-$p}: $md*2;
+    }
+    @if $s == md {
+        margin#{-$p}: $md;
+    }
+    @if $s == sm {
+        margin#{-$p}: $md/2;
+    }
+    @if $s == xs {
+        margin#{-$p}: $md/4;
+    }
+} // margin
+@mixin background-image($k){
+    @if $k == random {
+        background: url('https://source.unsplash.com/all/1920x1080/?nature') no-repeat;
+    } @else if $k == homepage {
+        background: url('https://source.unsplash.com/all/1920x1080/?landscape') no-repeat;
+    } @else if $k == static {
+        background-image: url('/images/fenera-main-bg-2.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+/* MIXINS */
+// Height
+@mixin height($divider){
+    $max-height: 720px;
+    height: $max-height/$divider;
+}
+// Padding
+@mixin spacer($property, $loc){
+    @if $loc {
+        &-#{$loc}{
+            &-xlg{
+                #{$property}-#{$loc}: $spacing-xl;
+            }
+            &-lg{
+                #{$property}-#{$loc}: $spacing-lg;
+            }
+            &-md{
+                #{$property}-#{$loc}: $spacing-md;
+            }
+            &-sm{
+                #{$property}-#{$loc}: $spacing-sm;
+            }
+            &-xs{
+                #{$property}-#{$loc}: $spacing-xs;
+            }
+        }
+    } @else {
+        &-xs{
+            #{$property}: $spacing-xs;
+        }
+        &-sm{
+            #{$property}: $spacing-sm;
+        }
+        &-md{
+            #{$property}: $spacing-md;
+        }
+        &-lg{
+            #{$property}: $spacing-lg;
+        }
+        &-xlg{
+            #{$property}: $spacing-xl;
+        }
+    }
+}
+// Spacing
+@mixin space($property, $size){
+    $default-size: 15px;
+    @if $size == xl {
+        $property: $default-size*4;
+    } @else if $size == lg {
+        $property: $default-size*2;
+    } @else if $size == md {
+        $property: $default-size;
+    } @else if $size == sm {
+        $property: $default-size/2;
+    } @else if $size == xs {
+        $property: $default-size/4;
+    }
+}
+
+/* Spacing */
+$spacing-md: 15px;
+$spacing-sm: $spacing-md/2;
+$spacing-xs: $spacing-sm/2;
+$spacing-lg: $spacing-md*2;
+$spacing-xl: $spacing-lg*2;
+
+.height{
+    &-xl {
+        @include height(1);
+    }
+    &-lg {
+        @include height(2);
+    }
+    &-md {
+        @include height(3);
+    }
+    &-sm {
+        @include height(4);
+    }
+    &-xs {
+        @include height(5);
+    }
+    &-xx {
+        @include height(10);
+    }
+    &-full {
+        height: 100% !important;
+        position: relative;
+    }
+}
+
+.padding {
+    $property: padding;
+
+    &-0{
+        #{$property}: 0 !important;
+    }
+
+    &-xl{
+        #{$property}: $spacing-xl;
+    }
+    &-lg{
+        #{$property}: $spacing-lg;
+    }
+    &-md{
+        #{$property}: $spacing-md;
+    }
+    &-sm{
+        #{$property}: $spacing-sm;
+    }
+    &-xs{
+        #{$property}: $spacing-xs;
+    }
+
+    &-left{
+        &-0{
+            #{$property}-left: 0 !important;
+        }
+        &-xl{
+            #{$property}-left: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-left: $spacing-lg;
+        }
+        &-md{
+            #{$property}-left: $spacing-md;
+        }
+        &-sm{
+            #{$property}-left: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-left: $spacing-xs;
+        }
+    }
+
+    &-right{
+        &-0{
+            #{$property}-right: 0 !important;
+        }
+        &-xl{
+            #{$property}-right: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-right: $spacing-lg;
+        }
+        &-md{
+            #{$property}-right: $spacing-md;
+        }
+        &-sm{
+            #{$property}-right: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-right: $spacing-xs;
+        }
+    }
+
+    &-top{
+        &-0{
+            #{$property}-top: 0 !important;
+        }
+        &-xl{
+            #{$property}-top: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-top: $spacing-lg;
+        }
+        &-md{
+            #{$property}-top: $spacing-md;
+        }
+        &-sm{
+            #{$property}-top: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-top: $spacing-xs;
+        }
+    }
+
+    &-bottom{
+        &-0{
+            #{$property}-bottom: 0 !important;
+        }
+        &-xl{
+            #{$property}-bottom: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-bottom: $spacing-lg;
+        }
+        &-md{
+            #{$property}-bottom: $spacing-md;
+        }
+        &-sm{
+            #{$property}-bottom: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-bottom: $spacing-xs;
+        }
+    }
+}
+
+.margin {
+    $property: margin;
+
+    &-0{
+        #{$property}: 0 !important;
+    }
+
+    &-xs{
+        #{$property}: $spacing-xs;
+    }
+    &-sm{
+        #{$property}: $spacing-sm;
+    }
+    &-md{
+        #{$property}: $spacing-md;
+    }
+    &-lg{
+        #{$property}: $spacing-lg;
+    }
+    &-xl{
+        #{$property}: $spacing-xl;
+    }
+
+    &-left{
+        &-0{
+            #{$property}-left: 0 !important;
+        }
+        &-xl{
+            #{$property}-left: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-left: $spacing-lg;
+        }
+        &-md{
+            #{$property}-left: $spacing-md;
+        }
+        &-sm{
+            #{$property}-left: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-left: $spacing-xs;
+        }
+    }
+
+    &-right{
+        &-0{
+            #{$property}-right: 0 !important;
+        }
+        &-xl{
+            #{$property}-right: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-right: $spacing-lg;
+        }
+        &-md{
+            #{$property}-right: $spacing-md;
+        }
+        &-sm{
+            #{$property}-right: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-right: $spacing-xs;
+        }
+    }
+
+    &-top{
+        &-0{
+            #{$property}-top: 0 !important;
+        }
+        &-xl{
+            #{$property}-top: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-top: $spacing-lg;
+        }
+        &-md{
+            #{$property}-top: $spacing-md;
+        }
+        &-sm{
+            #{$property}-top: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-top: $spacing-xs;
+        }
+    }
+
+    &-bottom{
+        &-0{
+            #{$property}-bottom: 0 !important;
+        }
+        &-xl{
+            #{$property}-bottom: $spacing-xl;
+        }
+        &-lg{
+            #{$property}-bottom: $spacing-lg;
+        }
+        &-md{
+            #{$property}-bottom: $spacing-md;
+        }
+        &-sm{
+            #{$property}-bottom: $spacing-sm;
+        }
+        &-xs{
+            #{$property}-bottom: $spacing-xs;
+        }
+    }
+}

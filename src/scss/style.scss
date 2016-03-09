@@ -1,6 +1,6 @@
-html *{
-    font-weight: 100;
-    & body *{
-        font: inherit;
-    }
+@import 'settings';
+@import 'global';
+
+body{
+    background-color: #ccc;
 }
