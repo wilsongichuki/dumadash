@@ -1,0 +1,6 @@
+html *{
+    font-weight: 100;
+    & body *{
+        font: inherit;
+    }
+}
