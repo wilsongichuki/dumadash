@@ -1,36 +1,30 @@
 {
-  "name": "starter-project",
-  "description": "This is the base start of your project. It is the bare minimum of folders and styles you should have for any project start, if you are a designer implementing designs in HTML/CSS/JS.",
+  "name": "dumadash",
+  "description": "Project for DumaWorks",
   "main": "gulpfile.js",
   "authors": [
-    "@gichuwil"
+    "@wilsongichuki"
   ],
   "license": "WTFPL",
   "keywords": [
-    "project",
-    "start",
-    "npm",
-    "node",
-    "ui",
-    "html",
-    "css",
-    "scss",
-    "less"
+    "project"
   ],
   "moduleType": [
     "es6",
-    "globals",
     "node"
   ],
-  "homepage": "./",
+  "homepage": "https://wilsongichuki.github.io/dumadash",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.6",
     "font-awesome": "fontawesome#~4.5.0"
-  }
+  },
+  "private": true
 }
