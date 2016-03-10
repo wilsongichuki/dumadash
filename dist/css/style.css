@@ -400,6 +400,10 @@ ul.list-unpadded,
 }
 
 /* Modified Bootstrap elements */
+.inline-block {
+  display: inline-block;
+}
+
 .modal {
   padding-top: 3%;
   overflow: auto;
@@ -618,6 +622,10 @@ tr.bg-none {
 /* Borders */
 .border {
   border: #cccccc solid 1px;
+}
+
+.border-none, .border-none * {
+  border: none !important;
 }
 
 .border-top {
@@ -846,4 +854,22 @@ tr.bg-none {
 
 .applicants .applicant.active {
   background: #ffe9cc;
+}
+
+.gravator {
+  padding-bottom: 15px;
+}
+
+.gravator-lg {
+  width: 60px;
+  height: 60px;
+  margin-right: 7.5px;
+  background: #cccccc;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gravator-details {
+  display: inline-block;
+  padding-top: 7.5px;
 }

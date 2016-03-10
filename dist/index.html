@@ -67,7 +67,7 @@
                 <div class="col-sm-6 text-right">
                     <ol class="list-inline">
                         <li><input class="form-control" type="text" placeholder="Search" ></li>
-                        <li><button class="btn btn-brand-primary strong">+ New Job</button></li>
+                        <li><button class="btn btn-brand-primary strong" data-toggle="modal" data-target="#new-job">+ New Job</button></li>
                     </ol>
                 </div>
             </div>
@@ -100,7 +100,7 @@
 
                 <a href="#" class="item">
                     <div class="item-content">
-                        <h4 class="strong">UX Designer</h4>
+                        <h4 class="strong truncate">Senior UI/UX Designer</h4>
                         <div class="row"><div class="divider"></div></div>
                         <ol class="list-unstyled">
                             <li class="strong">1 qualified</li>
@@ -116,40 +116,10 @@
                     </div>
                 </a>
 
-                <a href="#" class="item">
+                <a href="#" class="item" data-toggle="modal" data-target="#new-job">
                     <div class="item-content create">
                         <h1 class="text-center margin-top-xl">+</h1>
                         <h4 class="text-center">Add a new job</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Previous recruitments -->
-            <div class="row prev-list collapse" id="previous-recruitments">
-
-                <a class="item" href="#">
-                    <div class="item-content">
-                        <h4 class="strong">Android Developer</h4>
-                        <div class="row"><div class="divider"></div></div>
-                        <ol class="list-unstyled">
-                            <li class="strong">1 qualified</li>
-                            <li>3 total applicants</li>
-                        </ol>
-                        <div class="row"><div class="divider"></div></div>
-                        <h6>created <strong>1 min ago</strong></h6>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content">
-                        <h4 class="strong">UX Designer</h4>
-                        <div class="row"><div class="divider"></div></div>
-                        <ol class="list-unstyled">
-                            <li class="strong">1 qualified</li>
-                            <li>3 total applicants</li>
-                        </ol>
-                        <div class="row"><div class="divider"></div></div>
-                        <h6>created <strong>1 min ago</strong></h6>
                     </div>
                 </a>
             </div>
@@ -161,18 +131,18 @@
         <section class="container">
             <!-- Job applicants -->
             <div class="title padding-bottom-md">
-                <h3>Android Developers</h3>
+                <h3>Android Developers <button class="btn btn-default pull-right">Edit</button></h3>
 
                 <ol class="list-inline">
                     <li><h5>Date added: 5th May 2015</h5></li>
-                    <li><h5><a href="#job-requirements" data-toggle="collapse"><strong>Details</strong></a></h5></li>
-                    <li><h5><a href="#">Edit</a></h5></li>
+                    <li><h5><a href="#job-requirements" data-toggle="collapse"><strong>Job Requirements</strong></a></h5></li>
                 </ol>
+
             </div>
 
             <div class="row collapse padding-bottom-md" id="job-requirements">
                 <div class="col-sm-7">
-                    <h4 class="strong padding-top-md">Description</h4>
+                    <h4 class="strong">Description</h4>
                     <ol class="list-inline nav-justified">
                         <li>
                             <dt>Hours</dt>
@@ -211,157 +181,409 @@
                 </div>
             </div>
 
-            <div class="row panel panel-default">
-                <div class="col-sm-3 border-right-light height-lg">
-                    <div class="row panel-heading bg-info">
-                        <h4 class="strong">Applicants</h4>
+            <div class="col-sm-12 panel panel-default">
+                <div class="row">
+                    <div class="col-sm-3 border-right-light bg-grey-lighter height-lg">
+                        <div class="row panel-heading bg-grey">
+                            <h4 class="strong">Qualified applicants <span class="caret text-right"></span></h4>
+                        </div>
+                        <div class="row applicants panel-body">
+                            <a href="#" class="applicant">
+                                <div class="gravator img-circle">
+
+                                </div>
+                                <div class="summary">
+                                    <h4>James J. Maria</h4>
+                                    <ol class="list-inline small margin-bottom-0">
+                                        <li>Applied <strong>2 days ago</strong></li>
+                                        <li><strong class="label label-warning">qualified</strong></li>
+                                    </ol>
+                                </div>
+                            </a>
+                            <a href="#" class="applicant active">
+                                <div class="gravator img-circle">
+
+                                </div>
+                                <div class="summary">
+                                    <h4><strong>Milton Obote</strong></h4>
+                                    <ol class="list-inline small margin-bottom-0">
+                                        <li>Applied <strong>2 days ago</strong></li>
+                                        <li><strong class="label label-warning">qualified</strong></li>
+                                    </ol>
+                                </div>
+                            </a>
+                            <a href="#" class="applicant">
+                                <div class="gravator img-circle">
+
+                                </div>
+                                <div class="summary">
+                                    <h4>Jennifer K. Fredrick</h4>
+                                    <ol class="list-inline small margin-bottom-0">
+                                        <li>Applied <strong>2 days ago</strong></li>
+                                    </ol>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="row applicants panel-body">
-                        <a href="#" class="applicant">
-                            <div class="gravator img-circle">
 
+                    <div class="col-sm-4 bg-white border-right-light height-lg padding-bottom-md">
+                        <div class="row panel-heading">
+
+                        </div>
+                        <div class="panel-body padding-0">
+                            <div class="gravator">
+                                <img class="gravator-lg img-circle" />
+                                <div class="gravator-details">
+                                    <h3 class="strong">Milton Obote</h3>
+                                    <ol class="list-inline">
+                                        <li><strong>Android Developer</strong></li>
+                                        <li>26 years</li>
+                                    </ol>
+                                </div>
                             </div>
-                            <div class="summary">
-                                <h4>James J. Maria</h4>
-                                <ol class="list-inline small margin-0 padding-0">
-                                    <li>Applied <strong>2 days ago</strong></li>
-                                    <li><strong class="label label-success">qualified</strong></li>
+                            <div>
+                                <div class="row"><div class="divider"></div></div>
+                                <ol class="list-inline">
+                                    <li>
+                                        <dt>Availability</dt>
+                                        <dd>Open</dd>
+                                    </li>
+                                    <li>
+                                        <dt>Experience</dt>
+                                        <dd>3 years</dd>
+                                    </li>
+                                    <li>
+                                        <dt>Salary Range</dt>
+                                        <dd>Ksh. 10,000 - 30,000</dd>
+                                    </li>
                                 </ol>
                             </div>
-                        </a>
-                        <a href="#" class="applicant active">
-                            <div class="gravator img-circle">
-
+                            <div>
+                                <div class="row"><div class="divider"></div></div>
+                                <h4><strong>Bio</strong></h4>
+                                <p>I am a user experience designer based in Nairobi...more</p>
                             </div>
-                            <div class="summary">
-                                <h4>Milton Obote</h4>
-                                <ol class="list-inline small margin-0 padding-0">
-                                    <li>Applied <strong>2 days ago</strong></li>
-                                    <li><strong class="label label-success">qualified</strong></li>
+                            <div>
+                                <div class="row"><div class="divider"></div></div>
+                                <h4><strong>Skills</strong></h4>
+                                <ol class="list-inline">
+                                    <li>Javascript</li>
+                                    <li>HTML/CSS</li>
+                                    <li>SQL Server</li>
+                                    <li>Communication Skill</li>
+                                    <li>Javascript</li>
                                 </ol>
                             </div>
-                        </a>
-                        <a href="#" class="applicant">
-                            <div class="gravator img-circle">
+                        </div>
+                    </div>
+                    <div class="col-sm-5 height-lg  bg-grey-lighter">
+                        <div class="row panel-heading">
+                            <h5><strong>Milton</strong>'s Answers</h5>
+                        </div>
+                        <div class="panel-body padding-0">
+                            <div class="row">
+                                <ul class="nav nav-tabs small">
+                                    <li><a disabled>Stage</a></li>
+                                    <li role="presentation"><a href="#" role="tab" data-toggle="tab"><i class="fa fa-check"></i></a></li>
+                                    <li role="presentation"><a href="#" role="tab" data-toggle="tab"><i class="fa fa-check"></i></a></li>
+                                    <li role="presentation"><a href="#" role="tab" data-toggle="tab"><i class="fa fa-check"></i></a></li>
+                                    <li role="presentation" class="active"><a href="#" role="tab" data-toggle="tab">4</a></li>
+                                    <li role="presentation"><a href="#" role="tab" data-toggle="tab"><i class="fa fa-plus"></i></a></li>
+                                </ul>
 
+                                <div class="bg-white height-md padding-top-md">
+                                    <table class="table table-responsive border-none">
+                                        <tr>
+                                            <td>
+                                                <h5 class="strong">What is your name?</h5>
+                                            </td>
+                                            <td>
+                                                <p>Milton Obote</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="strong">Why are you interested in this job?</h5>
+                                            </td>
+                                            <td>
+                                                <p>I am a user experience designer based in Nairobi...moreI am a user experience designer based in Nairobi...more</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="summary">
-                                <h4>Jennifer K. Fredrick</h4>
-                                <ol class="list-inline small margin-0 padding-0">
-                                    <li>Applied <strong>2 days ago</strong></li>
-                                    <li><strong class="label label-success">qualified</strong></li>
-                                </ol>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 height-lg border-right-light">
-                    <div class="row panel-heading">
-                        <h4 class="strong">Answers</h4>
-                    </div>
-                    <div class="panel-body padding-0">
-                        <p></p>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 bg-grey-light height-lg">
-                    <div class="row panel-heading">
-                        <h4>About <strong>James</strong></h4>
-                    </div>
-                    <div class="panel-body padding-0">
-                        <p></p>
-                    </div>
-                </div>
             </div>
 
-
-            <div class="row job-list padding-bottom-md hidden" id="new-job-applicants">
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="item">
-                    <div class="item-content text-center border">
-                        <div class="row padding-bottom-md border-top-light">
-                            <div class="person-gravator">
-                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
-                            </div>
-                            <div class="person-info padding-top-sm">
-                                <h5 class="strong">Mambo Live</h5>
-                                <h6 class="padding-top-xs">iOS Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
         </section>
+    </div>
+
+    <div class="height-xs"></div>
+
+
+    <!-- New job -->
+    <div class="modal fade" id="new-job" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="col-sm-12 padding-bottom-lg">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel">New job recruitment</h3>
+                    </div>
+
+                    <div class="col-sm-8 tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="job-1">
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">1</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">Basic details</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="form-group padding-top-lg">
+                                        <input class="input-lg form-control" type="text" placeholder="What is the job title?" />
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-sm-6">
+                                            <input class="form-control" type="text" placeholder="Hours?" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" type="text" placeholder="Experience?" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-sm-6">
+                                            <input class="form-control" type="text" placeholder="Location?" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">2</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">What are the skills needed for this job?</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="form-group padding-top-lg">
+                                        <input class="input-lg form-control" type="text" placeholder="Skills" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">3</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">What are the core responsibilities for this job?</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="form-group padding-top-lg">
+                                        <textarea class="form-control" rows="5" placeholder="Responsibilities"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" role="tabpanel" id="job-2">
+
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">4</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">Do candidates need education in a specific subject?</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="row form-group padding-top-lg">
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>Four Four Graduate</option>
+                                                <option>Certificate programme</option>
+                                                <option>Diploma</option>
+                                                <option>Degree</option>
+                                                <option>Masters / PhD</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            in
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input class="form-control" type="text" placeholder="Design, marketing..." >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">5</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">Work experience</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="row form-group padding-top-lg">
+                                        <div class="col-sm-6">
+                                            <select class="form-control">
+                                                <option>more than</option>
+                                                <option>less than</option>
+                                                <option>equal to</option>
+                                                <option>does not matter</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" type="text" placeholder="2" >
+                                        </div>
+                                        <div class="col-sm-3">
+                                            years
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="padding-bottom-lg">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">6</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">What is your salary range?</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="row form-group padding-top-lg">
+                                        <div class="col-sm-3">
+                                            <input class="form-control" type="text" placeholder="0" >
+                                        </div>
+                                        <div class="col-sm-1 text-center">
+                                            -
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" type="text" placeholder="10,000" >
+                                        </div>
+                                        <div class="col-sm-3">
+                                            per month
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" role="tabpanel" id="job-3">
+                            <div class="padding-bottom-xl">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">7</h4></div>
+                                <div class="col-sm-11 padding-md ">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">Select plan</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+
+                                    <div class="form-group-lg padding-top-lg">
+                                        <select class="form-control margin-bottom-md">
+                                            <option>Express Plan - Ksh. 20,000</option>
+                                            <option>Elite Plan - Ksh. 50,000</option>
+                                            <option>Custom Plan - Let's talk</option>
+                                        </select>
+                                        <p><strong>Info on this plan</strong></p>
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="padding-bottom-xl">
+                                <div class="col-sm-1 padding-md text-center bg-grey-light border-radius"><h4 class="strong">8</h4></div>
+                                <div class="col-sm-11 padding-md">
+                                    <div class="title">
+                                        <span class="h4 padding-top-0 headline bg-white padding-right-md strong">Select payment</span>
+                                        <span class="divider-title"></span>
+                                    </div>
+                                    <div class="form-group-lg padding-top-lg">
+                                        <ol class="list-inline nav-justified">
+                                            <li class="radio"><label>
+                                                <input class="" type="radio" name="mode" /> MPESA
+                                            </label></li>
+                                            <li class="radio">
+                                                <label><input class="" type="radio" name="mode" /> VISA/Mastercard</label>
+                                            </li>
+                                            <li class="checkbox">
+                                                <label><input class="" type="radio" name="mode" /> Cheque</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 ">
+
+                        <h4 class="text-center padding-bottom-md">The ideal candidate </h4>
+                        <div class="row">
+                            <div class="padding-md margin-bottom-md bg-grey-light">
+                                <section>
+                                    <h3>Android Developer</h3>
+                                    <h4>a <strong>fulltime</strong>, <strong>novice</strong></h4>
+                                    <h5>from <strong>Nairobi</strong></h5>
+                                </section>
+                                <div class="row"><div class="divider"></div></div>
+                                <section>
+                                    <h4><strong>Skills</strong></h4>
+                                    <p>Javascript, SQL Server, Management skills, etc</p>
+                                </section>
+                                <div class="row"><div class="divider"></div></div>
+                                <section>
+                                    <h4><strong>Duties</strong></h4>
+                                    <p>Lorem ipsum</p>
+                                </section>
+                                <div class="row"><div class="divider"></div></div>
+                                <section>
+                                    <h4><strong>Education</strong></h4>
+                                    <p><strong>Masters/PhD</strong> in <strong>design</strong></p>
+                                </section>
+                                <div class="row"><div class="divider"></div></div>
+                                <section>
+                                    <h4><strong>Work Experience</strong></h4>
+                                    <p><strong>Masters/PhD</strong> in <strong>design</strong></p>
+                                </section>
+                                <div class="row"><div class="divider"></div></div>
+                                <section>
+                                    <h4><strong>Salary Range</strong></h4>
+                                    <p><strong>Ksh. 100,000</strong> - <strong>200,000</strong></p>
+                                </section>
+                            </div>
+
+                            <div class="padding-md margin-bottom-md bg-grey-light">
+                                <section>
+                                    <h4><strong>Plan</strong></h4>
+                                    <p>Elite Plan - Ksh. 20,000</p>
+                                </section>
+                            </div>
+
+                            <div class="margin-bottom-md">
+                                <a href="#job-1" class="btn btn-brand-primary" data-toggle="tab">Next 1</a>
+                                <a href="#job-2" class="btn btn-brand-primary" data-toggle="tab">Next 2</a>
+                                <a href="#job-3" class="btn btn-brand-primary" data-toggle="tab">Next 2</a>
+                                <a href="#" class="btn btn-brand-primary strong" data-dismiss="modal">Finish</a>
+                            </div>
+
+                            <div class="margin-bottom-md">
+
+                                <button class="btn-link pull-left">Cancel</button>
+                                <button class="btn pull-right">Save as draft</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

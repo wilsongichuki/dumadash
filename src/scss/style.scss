@@ -156,3 +156,19 @@ $body-bg: darken(#fff, 5%);
     }
 
 }
+
+.gravator{
+    padding-bottom: $spacing-md;
+    &-lg{
+        width: 60px;
+        height: 60px;
+        margin-right: $spacing-sm;
+        background: $brand-grey-light;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-details{
+        display: inline-block;
+        padding-top: $spacing-sm;
+    }
+}

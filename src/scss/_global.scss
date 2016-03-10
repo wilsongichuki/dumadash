@@ -133,6 +133,9 @@ ul.list-unpadded,
 }
 
 /* Modified Bootstrap elements */
+.inline-block{
+    display: inline-block;
+}
 .modal{
     padding-top: 3%;
     overflow: auto;
@@ -329,6 +332,10 @@ tr.bg-none{
 
     $property: border;
     #{$property}: $brand-grey-light solid 1px;
+
+    &-none, &-none *{
+        border: none !important;
+    }
     &-top{
         #{$property}-top: $brand-grey solid 1px;
         &-light {
