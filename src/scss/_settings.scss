@@ -51,7 +51,6 @@ $btn-bottom-width: 3px;
     } @else if $k == homepage {
         background: url('https://source.unsplash.com/all/1920x1080/?landscape') no-repeat;
     } @else if $k == static {
-        background-image: url('/images/fenera-main-bg-2.jpg');
         background-repeat: no-repeat;
     }
 }

@@ -1,10 +1,158 @@
 @import 'settings';
 @import 'global';
 
+$body-bg: darken(#fff, 5%);
 .main{
-    background-color: #ccc;
-
     &-header{
-
+        &-nav{
+            li{
+                opacity: .5;
+            }
+            li.active, li:hover{
+                opacity: 1;
+            }
+            &-count{
+                font-size: 43px;
+                line-height: 1em;
+            }
+            &-detail{
+                font-size: 16px;
+                line-height: 1em;
+            }
+        }
     }
+}
+
+.content{
+    .title {
+        .headline{
+            z-index: 1000;
+            padding-right: $spacing-md;
+        }
+    }
+    .rec-list{
+        a.item{
+            width: (100%/5);
+            display: inline-block;
+            margin-right: -4px; /* fix. I do not know why this happened */
+            padding: $spacing-md;
+            height: 260px;
+            vertical-align: top;
+
+            &.active .item-content{
+                background: lighten($brand-primary,40%);
+                color: darken(orange, 30%);
+                &:hover{
+                    color: darken(orange, 20%);
+                }
+            }
+
+            .item-content{
+                background: #fff;
+                border-radius: $border-radius;
+                border: #ccc solid 1px;
+                padding: $spacing-md;
+                color: #2f6fad;
+
+                &:hover{
+                    color: darken(orange, 20%);
+                }
+
+                &.create{
+                    opacity: .4;
+                    height: 230px;
+                    color: #2F6FAD;
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+    .prev-list{
+        a.item{
+            width: (100%/5);
+            display: inline-block;
+            margin-right: -4px; /* fix. I do not know why this happened */
+            padding: $spacing-md;
+            max-height: 260px;
+            vertical-align: top;
+            color: #666;
+
+            .item-content{
+                background: #fff;
+                border-radius: $border-radius;
+                border: #ccc solid 1px;
+                padding: $spacing-md;
+            }
+        }
+    }
+
+    .job-list{
+        a.item{
+            width: (100%/6);
+            display: inline-block;
+            padding: $spacing-md;
+            vertical-align: top;
+            margin-right: -4px;
+            .item-content{
+                background: #fff;
+                border-radius: $border-radius;
+                padding: 0 $spacing-md 0 $spacing-md;
+                position: relative;
+                color: #444;
+
+                .person-gravator{
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
+
+    .success-list{
+        a.item{
+            width: (100%/6);
+            display: inline-block;
+            padding: $spacing-md;
+            vertical-align: top;
+            margin-right: -4px;
+            .item-content{
+                background: #fff;
+                border-radius: $border-radius;
+                border: #ccc solid 1px;
+                padding: $spacing-md $spacing-md 0 $spacing-md;
+                position: relative;
+                color: #444;
+
+                .person-gravator{
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
+}
+
+.applicants{
+    padding: 0;
+    .applicant{
+        display: block;
+        color: inherit;
+        padding: $spacing-md;
+        border-bottom: $brand-grey-light solid 1px;
+
+        .gravator{
+            width: 30px;
+            height: 30px;
+            margin-right: $spacing-sm;
+            background: $brand-grey-light;
+            display: inline-block;
+        }
+        .summary{
+            display: inline-block;
+        }
+        &.active{
+            background: lighten($brand-primary,40%);
+        }
+    }
+
 }

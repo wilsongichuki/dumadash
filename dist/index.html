@@ -10,19 +10,362 @@
 
 </head>
 
-<body>
+<body class="bg-grey-light">
 <div class="container-fluid">
 
     <!-- Header -->
-    <div class="row main bg-grey padding-top-md padding-bottom-md">
+    <div class="row main bg-grey-dark padding-top-md">
 
         <section class="container main-header">
-            <h1>New man</h1>
-        </section>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Company Industries</h4>
+                    <h5></h5>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="#" class="h4">James Doe <span class="caret"></span></a>
+                </div>
+            </div>
 
+            <!-- Nav -->
+            <div class="row padding-top-lg padding-bottom-md">
+                <div class="col-sm-12 hidden">
+                    <ol class="navbar nav-justified list-inline main-header-nav">
+                        <li class="active">
+                            <a href="index.html" class="text-white">
+                                <span class="main-header-nav-count margin-top-0 pull-left margin-right-md">0 </span>
+                                <span class="h5 strong">Ongoing<br />recruitments</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="job-applicants.html" class="text-white">
+                                <span class="main-header-nav-count margin-top-0 pull-left margin-right-md">3</span>
+                                <span class="main-header-nav-detail">new<br />applicants</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="successful-recruitments.html" class="text-white">
+                                <span class="main-header-nav-count margin-top-0 pull-left margin-right-md">3</span>
+                                <span class="main-header-nav-detail">successful<br />recruitments</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-6">
+
+                    <ol class="list-inline main-header-nav">
+                        <li class="active"><h3>4 ongoing recruitments</h3></li>
+                        <li class="margin-left-lg">
+                            <h4><a data-toggle="collapse" href="#previous-recruitments" aria-expanded="false" aria-controls="collapseExample" class="text-white">
+                                <span class="headline">Previous recruitments</span>
+                            </a></h4>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <ol class="list-inline">
+                        <li><input class="form-control" type="text" placeholder="Search" ></li>
+                        <li><button class="btn btn-brand-primary strong">+ New Job</button></li>
+                    </ol>
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <!-- Content -->
+    <div class="row content padding-top-md padding-bottom-md">
+        <section class="container">
+            <div class="row rec-list">
+
+                <a class="item active" data-toggle="collapse" href="#android-developers" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="item-content">
+                        <h4 class="strong">Android Developer</h4>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li>2 stages</li>
+                            <li>23 total questions</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li class="strong">1 qualified</li>
+                            <li>3 total applicants</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <h6>created <strong>1 min ago</strong></h6>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content">
+                        <h4 class="strong">UX Designer</h4>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li class="strong">1 qualified</li>
+                            <li>3 total applicants</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li>2 stages</li>
+                            <li>23 total questions</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <h6>created <strong>1 min ago</strong></h6>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content create">
+                        <h1 class="text-center margin-top-xl">+</h1>
+                        <h4 class="text-center">Add a new job</h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Previous recruitments -->
+            <div class="row prev-list collapse" id="previous-recruitments">
+
+                <a class="item" href="#">
+                    <div class="item-content">
+                        <h4 class="strong">Android Developer</h4>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li class="strong">1 qualified</li>
+                            <li>3 total applicants</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <h6>created <strong>1 min ago</strong></h6>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content">
+                        <h4 class="strong">UX Designer</h4>
+                        <div class="row"><div class="divider"></div></div>
+                        <ol class="list-unstyled">
+                            <li class="strong">1 qualified</li>
+                            <li>3 total applicants</li>
+                        </ol>
+                        <div class="row"><div class="divider"></div></div>
+                        <h6>created <strong>1 min ago</strong></h6>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="row content bg-grey-lighter border-top-light border-bottom-light padding-bottom-md padding-top-md" id="android-developers">
+        <section class="container">
+            <!-- Job applicants -->
+            <div class="title padding-bottom-md">
+                <h3>Android Developers</h3>
+
+                <ol class="list-inline">
+                    <li><h5>Date added: 5th May 2015</h5></li>
+                    <li><h5><a href="#job-requirements" data-toggle="collapse"><strong>Details</strong></a></h5></li>
+                    <li><h5><a href="#">Edit</a></h5></li>
+                </ol>
+            </div>
+
+            <div class="row collapse padding-bottom-md" id="job-requirements">
+                <div class="col-sm-7">
+                    <h4 class="strong padding-top-md">Description</h4>
+                    <ol class="list-inline nav-justified">
+                        <li>
+                            <dt>Hours</dt>
+                            <dd>Fulltime</dd>
+                        </li>
+                        <li>
+                            <dt>Experience</dt>
+                            <dd>Advanced</dd>
+                        </li>
+                        <li>
+                            <dt>Location</dt>
+                            <dd>Kenya</dd>
+                        </li>
+                        <li>
+                            <dt>Hours</dt>
+                            <dd>Fulltime</dd>
+                        </li>
+                    </ol>
+                    <h4 class="strong padding-top-md">Skills</h4>
+                    <ol class="list-inline">
+                        <li>Javascript</li>
+                        <li>HTML/CSS</li>
+                        <li>Communication Skills</li>
+                        <li>SQL Server</li>
+                    </ol>
+
+                    <h4 class="strong padding-top-md">Education</h4>
+                    <p><strong>Masters/PhD</strong> in Design</p>
+
+                    <h4 class="strong padding-top-md">Salary range</h4>
+                    <p><strong>Ksh. 100,000</strong> to <strong>Ksh. 200,000</strong></p>
+                </div>
+                <div class="col-sm-5">
+                    <h4 class="strong">Responsibilities</h4>
+                    <p>Lorem Ipsum...more</p>
+                </div>
+            </div>
+
+            <div class="row panel panel-default">
+                <div class="col-sm-3 border-right-light height-lg">
+                    <div class="row panel-heading bg-info">
+                        <h4 class="strong">Applicants</h4>
+                    </div>
+                    <div class="row applicants panel-body">
+                        <a href="#" class="applicant">
+                            <div class="gravator img-circle">
+
+                            </div>
+                            <div class="summary">
+                                <h4>James J. Maria</h4>
+                                <ol class="list-inline small margin-0 padding-0">
+                                    <li>Applied <strong>2 days ago</strong></li>
+                                    <li><strong class="label label-success">qualified</strong></li>
+                                </ol>
+                            </div>
+                        </a>
+                        <a href="#" class="applicant active">
+                            <div class="gravator img-circle">
+
+                            </div>
+                            <div class="summary">
+                                <h4>Milton Obote</h4>
+                                <ol class="list-inline small margin-0 padding-0">
+                                    <li>Applied <strong>2 days ago</strong></li>
+                                    <li><strong class="label label-success">qualified</strong></li>
+                                </ol>
+                            </div>
+                        </a>
+                        <a href="#" class="applicant">
+                            <div class="gravator img-circle">
+
+                            </div>
+                            <div class="summary">
+                                <h4>Jennifer K. Fredrick</h4>
+                                <ol class="list-inline small margin-0 padding-0">
+                                    <li>Applied <strong>2 days ago</strong></li>
+                                    <li><strong class="label label-success">qualified</strong></li>
+                                </ol>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 height-lg border-right-light">
+                    <div class="row panel-heading">
+                        <h4 class="strong">Answers</h4>
+                    </div>
+                    <div class="panel-body padding-0">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 bg-grey-light height-lg">
+                    <div class="row panel-heading">
+                        <h4>About <strong>James</strong></h4>
+                    </div>
+                    <div class="panel-body padding-0">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row job-list padding-bottom-md hidden" id="new-job-applicants">
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="item-content text-center border">
+                        <div class="row padding-bottom-md border-top-light">
+                            <div class="person-gravator">
+                                <i class="fa fa-user img-circle bg-grey-light padding-md fa-2x border"></i>
+                            </div>
+                            <div class="person-info padding-top-sm">
+                                <h5 class="strong">Mambo Live</h5>
+                                <h6 class="padding-top-xs">iOS Developer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
 </div>
+
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
