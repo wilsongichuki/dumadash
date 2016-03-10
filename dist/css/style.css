@@ -465,6 +465,14 @@ canvas {
   padding-right: 15px !important;
 }
 
+.form-control {
+  background: #e6e6e6 !important;
+}
+
+.form-control:hover, .form-control:focus, .form-control:visited {
+  background: #fafafa !important;
+}
+
 /* Pace plugin */
 .pace {
   pointer-events: none;
@@ -739,15 +747,6 @@ tr.bg-none {
   vertical-align: top;
 }
 
-.content .rec-list a.item.active .item-content {
-  background: #ffe9cc;
-  color: #664200;
-}
-
-.content .rec-list a.item.active .item-content:hover {
-  color: #996300;
-}
-
 .content .rec-list a.item .item-content {
   background: #fff;
   border-radius: 6px;
@@ -768,6 +767,20 @@ tr.bg-none {
 
 .content .rec-list a.item .item-content.create:hover {
   opacity: .7;
+}
+
+.content .rec-list a.item.active .item-content {
+  background: #fafafa;
+  height: 262px;
+  border-width: 2px;
+  border-bottom: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #664200;
+}
+
+.content .rec-list a.item.active .item-content:hover {
+  color: #996300;
 }
 
 .content .prev-list a.item {
@@ -840,11 +853,7 @@ tr.bg-none {
   border-bottom: #cccccc solid 1px;
 }
 
-.applicants .applicant .gravator {
-  width: 30px;
-  height: 30px;
-  margin-right: 7.5px;
-  background: #cccccc;
+.applicants .applicant .grav {
   display: inline-block;
 }
 
@@ -856,10 +865,6 @@ tr.bg-none {
   background: #ffe9cc;
 }
 
-.gravator {
-  padding-bottom: 15px;
-}
-
 .gravator-lg {
   width: 60px;
   height: 60px;
@@ -869,7 +874,39 @@ tr.bg-none {
   vertical-align: top;
 }
 
+.gravator-lg img {
+  width: 60px;
+  height: 60px;
+}
+
+.gravator-pr {
+  width: 60px;
+  height: 60px;
+  background: #cccccc;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gravator-pr img {
+  width: 60px;
+  height: 60px;
+}
+
+.gravator-sm {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 7.5px;
+  background: #cccccc;
+  vertical-align: top;
+}
+
+.gravator-sm img {
+  width: 35px;
+  height: 35px;
+}
+
 .gravator-details {
   display: inline-block;
-  padding-top: 7.5px;
+  vertical-align: top;
 }

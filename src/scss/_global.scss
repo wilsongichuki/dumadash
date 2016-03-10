@@ -187,6 +187,12 @@ canvas{
         padding-right: 15px !important;
     }
 }
+.form-control{
+    background: $brand-grey-lighter !important;
+    &:hover, &:focus, &:visited{
+        background: #fafafa !important;
+    }
+}
 
 /* Pace plugin */
 .pace {

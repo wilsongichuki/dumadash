@@ -8,7 +8,8 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync').create(),
     jasmine     = require('gulp-jasmine'),
     runSequence = require('run-sequence'),
-    git = require('gulp-git');
+    git = require('gulp-git'),
+    uglify = require('gulp-uglify');
 
 // Sass stuff
 gulp.task('sass', function () {
@@ -18,6 +19,13 @@ gulp.task('sass', function () {
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename({extname: '.min.css'}))
         .pipe(gulp.dest('./dist/css'));
+});
+
+// Javascript stuff
+gulp.task('js', function () {
+    return gulp.src('./src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('jasmine', function () {
@@ -38,6 +46,8 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("./src/scss/*.scss", ['sass']);
+    gulp.watch("./src/js/*.js", ['js']);
+    gulp.watch("./src/**/*").on('change', browserSync.reload);
     gulp.watch("./dist/**/*").on('change', browserSync.reload);
 
 });
