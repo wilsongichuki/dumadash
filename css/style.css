@@ -269,7 +269,6 @@
   margin-bottom: 3.75px;
 }
 
-/* Lending Portal */
 /* Globals */
 * {
   font-family: sans-serif;
@@ -363,10 +362,17 @@ ul.list-unpadded,
 }
 
 .divider {
-  margin: 15px 0;
+  margin: 7.5px 0;
   width: 100%;
   display: inline-block;
   border-top: #e6e6e6 solid 1px;
+}
+
+.divider-title {
+  border-bottom: #cccccc solid 2px;
+  width: 100%;
+  margin-top: -13px;
+  display: block;
 }
 
 .inline {
@@ -394,6 +400,10 @@ ul.list-unpadded,
 }
 
 /* Modified Bootstrap elements */
+.inline-block {
+  display: inline-block;
+}
+
 .modal {
   padding-top: 3%;
   overflow: auto;
@@ -453,6 +463,14 @@ canvas {
 
 .table td:last-child, .table th:last-child {
   padding-right: 15px !important;
+}
+
+.form-control {
+  background: #e6e6e6 !important;
+}
+
+.form-control:hover, .form-control:focus, .form-control:visited {
+  background: #fafafa !important;
 }
 
 /* Pace plugin */
@@ -541,9 +559,27 @@ canvas {
   background-color: #f2f2f2;
 }
 
+.bg-grey-lighter {
+  background-color: #fafafa;
+}
+
+.bg-grey-dark {
+  background-color: gray;
+  color: #fff;
+}
+
 .bg-none {
   background: none !important;
   border: none !important;
+}
+
+.bg-transparent {
+  background: transparent !important;
+  border: transparent !important;
+}
+
+.bg-body {
+  background-color: #f2f2f2;
 }
 
 tr.bg-none {
@@ -582,9 +618,22 @@ tr.bg-none {
   color: #fff;
 }
 
+.btn-brand-primary {
+  background: #ff8f00;
+  color: #fff;
+}
+
+.btn-brand-primary:hover {
+  color: #fff;
+}
+
 /* Borders */
 .border {
   border: #cccccc solid 1px;
+}
+
+.border-none, .border-none * {
+  border: none !important;
 }
 
 .border-top {
@@ -665,6 +714,199 @@ tr.bg-none {
   border-width: 5px;
 }
 
-.main {
-  background-color: #ccc;
+.main-header-nav li {
+  opacity: .5;
+}
+
+.main-header-nav li.active, .main-header-nav li:hover {
+  opacity: 1;
+}
+
+.main-header-nav-count {
+  font-size: 43px;
+  line-height: 1em;
+}
+
+.main-header-nav-detail {
+  font-size: 16px;
+  line-height: 1em;
+}
+
+.content .title .headline {
+  z-index: 1000;
+  padding-right: 15px;
+}
+
+.content .rec-list a.item {
+  width: 20%;
+  display: inline-block;
+  margin-right: -4px;
+  /* fix. I do not know why this happened */
+  padding: 15px;
+  height: 260px;
+  vertical-align: top;
+}
+
+.content .rec-list a.item .item-content {
+  background: #fff;
+  border-radius: 6px;
+  border: #ccc solid 1px;
+  padding: 15px;
+  color: #2f6fad;
+}
+
+.content .rec-list a.item .item-content:hover {
+  color: #996300;
+}
+
+.content .rec-list a.item .item-content.create {
+  opacity: .4;
+  height: 230px;
+  color: #2F6FAD;
+}
+
+.content .rec-list a.item .item-content.create:hover {
+  opacity: .7;
+}
+
+.content .rec-list a.item.active .item-content {
+  background: #fafafa;
+  height: 262px;
+  border-width: 2px;
+  border-bottom: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #664200;
+}
+
+.content .rec-list a.item.active .item-content:hover {
+  color: #996300;
+}
+
+.content .prev-list a.item {
+  width: 20%;
+  display: inline-block;
+  margin-right: -4px;
+  /* fix. I do not know why this happened */
+  padding: 15px;
+  max-height: 260px;
+  vertical-align: top;
+  color: #666;
+}
+
+.content .prev-list a.item .item-content {
+  background: #fff;
+  border-radius: 6px;
+  border: #ccc solid 1px;
+  padding: 15px;
+}
+
+.content .job-list a.item {
+  width: 16.66667%;
+  display: inline-block;
+  padding: 15px;
+  vertical-align: top;
+  margin-right: -4px;
+}
+
+.content .job-list a.item .item-content {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0 15px 0 15px;
+  position: relative;
+  color: #444;
+}
+
+.content .job-list a.item .item-content .person-gravator {
+  margin-top: -20px;
+}
+
+.content .success-list a.item {
+  width: 16.66667%;
+  display: inline-block;
+  padding: 15px;
+  vertical-align: top;
+  margin-right: -4px;
+}
+
+.content .success-list a.item .item-content {
+  background: #fff;
+  border-radius: 6px;
+  border: #ccc solid 1px;
+  padding: 15px 15px 0 15px;
+  position: relative;
+  color: #444;
+}
+
+.content .success-list a.item .item-content .person-gravator {
+  margin-top: -20px;
+}
+
+.applicants {
+  padding: 0;
+}
+
+.applicants .applicant {
+  display: block;
+  color: inherit;
+  padding: 15px;
+  border-bottom: #cccccc solid 1px;
+}
+
+.applicants .applicant .grav {
+  display: inline-block;
+}
+
+.applicants .applicant .summary {
+  display: inline-block;
+}
+
+.applicants .applicant.active {
+  background: #ffe9cc;
+}
+
+.gravator-lg {
+  width: 60px;
+  height: 60px;
+  margin-right: 7.5px;
+  background: #cccccc;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gravator-lg img {
+  width: 60px;
+  height: 60px;
+}
+
+.gravator-pr {
+  width: 60px;
+  height: 60px;
+  background: #cccccc;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gravator-pr img {
+  width: 60px;
+  height: 60px;
+}
+
+.gravator-sm {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 7.5px;
+  background: #cccccc;
+  vertical-align: top;
+}
+
+.gravator-sm img {
+  width: 35px;
+  height: 35px;
+}
+
+.gravator-details {
+  display: inline-block;
+  vertical-align: top;
 }
