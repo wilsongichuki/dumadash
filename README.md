@@ -1,2 +1,2 @@
-## Duma Works Dashboard
-This is work in progress.
+## Duma Works Employer Dashboard (WIP)
+View the UI progress (here)[http://wilsongichuki.github.io/dumadash]
